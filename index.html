@@ -57,7 +57,7 @@ h1 { font-size: clamp(40px, 6vw, 60px); line-height: 1.05; letter-spacing: -.035
 .btn svg { width: 18px; height: 18px; fill: currentColor; }
 .avatar { width: 220px; height: 220px; border-radius: 28px; object-fit: cover; box-shadow: var(--shadow); border: 1px solid var(--line); }
 
-.stats { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
 .stat { padding: 24px 20px; text-align: center; }
 .stat + .stat { border-left: 1px solid var(--line); }
 .stat b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -.03em; }
@@ -114,7 +114,7 @@ footer small { display: block; margin-top: 40px; color: var(--muted); font-size:
   .stat + .stat { border-left: 0; }
   .stat { border-bottom: 1px solid var(--line); }
   .stat:nth-child(even) { border-left: 1px solid var(--line); }
-  .stat:last-child { grid-column: 1 / -1; border-bottom: 0; border-left: 0; }
+  .stat:nth-child(n+3) { border-bottom: 0; }
   .projects, .mini, .skills { grid-template-columns: 1fr; }
   .card.wide ul { columns: 1; }
   section { padding-top: 56px; }
@@ -159,7 +159,6 @@ footer small { display: block; margin-top: 40px; color: var(--muted); font-size:
     <div class="stat"><b>643</b><span>merged PRs</span></div>
     <div class="stat"><b>672</b><span>PRs reviewed</span></div>
     <div class="stat"><b>22</b><span>repositories</span></div>
-    <div class="stat"><b>37,000+</b><span>schools reached</span></div>
   </div>
 
   <section id="work">
