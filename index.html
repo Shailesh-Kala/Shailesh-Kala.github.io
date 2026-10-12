@@ -17,13 +17,13 @@
 <style>
 :root {
   --bg: #fafaf9; --surface: #ffffff; --ink: #18181b; --muted: #52525b; --line: #e7e5e4;
-  --accent: #4f46e5; --accent-soft: #eef2ff; --ok: #16a34a;
+  --accent: #4f46e5; --accent-soft: #eef2ff; --on-accent: #ffffff; --ok: #16a34a;
   --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0c0c0f; --surface: #15151a; --ink: #f4f4f5; --muted: #a1a1aa; --line: #27272a;
-    --accent: #818cf8; --accent-soft: #1e1b4b; --ok: #4ade80;
+    --accent: #818cf8; --accent-soft: #1e1b4b; --on-accent: #0c0c0f; --ok: #4ade80;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
   }
 }
@@ -53,7 +53,7 @@ h1 { font-size: clamp(40px, 6vw, 60px); line-height: 1.05; letter-spacing: -.035
 .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 1px solid var(--line); color: var(--ink); background: var(--surface); transition: transform .15s, border-color .15s; }
 .btn:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-1px); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .btn svg { width: 18px; height: 18px; fill: currentColor; }
 .avatar { width: 220px; height: 220px; border-radius: 28px; object-fit: cover; box-shadow: var(--shadow); border: 1px solid var(--line); }
 
