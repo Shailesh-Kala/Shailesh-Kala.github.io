@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shailesh Kala · Software Engineer & AI/LLM Tech Lead</title>
+<meta name="description" content="Software Engineer and Tech Lead building AI-powered, multi-tenant, and government-scale platforms. LangChain, RAG, MCP, multi-agent systems.">
+<meta property="og:title" content="Shailesh Kala · Software Engineer & AI/LLM Tech Lead">
+<meta property="og:description" content="I build AI-powered, multi-tenant, and government-scale platforms end to end.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/Shailesh-Kala?s=400">
+<meta property="og:url" content="https://shailesh-kala.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%234f46e5'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'>SK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf9; --surface: #ffffff; --ink: #18181b; --muted: #52525b; --line: #e7e5e4;
+  --accent: #4f46e5; --accent-soft: #eef2ff; --ok: #16a34a;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0c0f; --surface: #15151a; --ink: #f4f4f5; --muted: #a1a1aa; --line: #27272a;
+    --accent: #818cf8; --accent-soft: #1e1b4b; --ok: #4ade80;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+nav .logo { font-weight: 800; color: var(--ink); letter-spacing: -.02em; }
+nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; font-size: 14px; font-weight: 500; }
+nav ul a { color: var(--muted); }
+nav ul a:hover { color: var(--ink); text-decoration: none; }
+
+header { padding: 80px 0 64px; }
+.hero { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); padding: 6px 12px; border-radius: 999px; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 25%, transparent); }
+h1 { font-size: clamp(40px, 6vw, 60px); line-height: 1.05; letter-spacing: -.035em; margin: 20px 0 12px; font-weight: 800; }
+.role { font-size: clamp(18px, 2.4vw, 22px); font-weight: 600; color: var(--accent); margin: 0 0 20px; }
+.lede { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 0 32px; }
+.lede strong { color: var(--ink); font-weight: 600; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 1px solid var(--line); color: var(--ink); background: var(--surface); transition: transform .15s, border-color .15s; }
+.btn:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-1px); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn svg { width: 18px; height: 18px; fill: currentColor; }
+.avatar { width: 220px; height: 220px; border-radius: 28px; object-fit: cover; box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+.stat { padding: 24px 20px; text-align: center; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -.03em; }
+.stat span { font-size: 13px; color: var(--muted); }
+
+section { padding: 72px 0 0; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+h2 { font-size: 32px; letter-spacing: -.025em; margin: 0 0 32px; font-weight: 800; }
+
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.card.wide { grid-column: 1 / -1; }
+.card .meta { font-size: 13px; font-weight: 600; color: var(--muted); margin: 0 0 6px; }
+.card h3 { font-size: 21px; letter-spacing: -.02em; margin: 0 0 10px; }
+.card p { color: var(--muted); margin: 0 0 14px; }
+.card ul { margin: 0 0 18px; padding-left: 18px; color: var(--muted); font-size: 15px; }
+.card li { margin-bottom: 6px; }
+.card li strong { color: var(--ink); font-weight: 600; }
+.card.wide ul { columns: 2; column-gap: 40px; }
+.card.wide li { break-inside: avoid; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.tag { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.highlight { display: inline-block; font-size: 13px; font-weight: 700; color: var(--ok); margin-bottom: 12px; }
+
+.mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.mini .card { padding: 22px; }
+.mini h3 { font-size: 17px; }
+.mini p { font-size: 14.5px; margin: 0 0 12px; }
+
+.timeline { border-left: 2px solid var(--line); padding-left: 28px; margin-left: 6px; }
+.job { position: relative; margin-bottom: 32px; }
+.job::before { content: ""; position: absolute; left: -36px; top: 7px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); }
+.job h3 { font-size: 19px; margin: 0; }
+.job .when { font-size: 14px; color: var(--muted); font-weight: 500; margin: 2px 0 10px; }
+.job ul { margin: 0; padding-left: 18px; color: var(--muted); }
+.job li { margin-bottom: 6px; }
+
+.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.skill { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+.skill h3 { font-size: 15px; margin: 0 0 10px; }
+
+footer { margin-top: 96px; padding: 64px 0; border-top: 1px solid var(--line); text-align: center; }
+footer h2 { margin-bottom: 12px; }
+footer p { color: var(--muted); margin: 0 0 28px; }
+footer .ctas { justify-content: center; }
+footer small { display: block; margin-top: 40px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 820px) {
+  nav ul { display: none; }
+  header { padding: 48px 0 40px; }
+  .hero { grid-template-columns: 1fr; gap: 28px; }
+  .avatar { width: 120px; height: 120px; border-radius: 20px; order: -1; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat + .stat { border-left: 0; }
+  .stat { border-bottom: 1px solid var(--line); }
+  .stat:nth-child(even) { border-left: 1px solid var(--line); }
+  .stat:last-child { grid-column: 1 / -1; border-bottom: 0; border-left: 0; }
+  .projects, .mini, .skills { grid-template-columns: 1fr; }
+  .card.wide ul { columns: 1; }
+  section { padding-top: 56px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">Shailesh Kala</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header>
+    <div class="hero">
+      <div>
+        <span class="status">Open to new roles</span>
+        <h1>Shailesh Kala</h1>
+        <p class="role">Software Engineer · Tech Lead · AI/LLM Engineering</p>
+        <p class="lede">I build <strong>AI-powered, multi-tenant, and government-scale platforms</strong> end to end. I have 4+ years of full-stack work, most recently shipping production LLM systems with provider-agnostic LangChain cores across OpenAI and Claude, multi-agent pipelines, RAG, and MCP.</p>
+        <div class="ctas">
+          <a class="btn primary" href="mailto:shaileshkala00@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.3-.5 7.7 6.1L19.7 5H4.3ZM20 6.6l-7.4 5.9a1 1 0 0 1-1.2 0L4 6.6v11.9c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V6.6Z"/></svg>Email me</a>
+          <a class="btn" href="https://linkedin.com/in/shailesh-kala-142954182"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6ZM8 19H5V9.5h3V19ZM6.5 8.2a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.7 13 12.7 14.3V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.6 2 3.6 4.7V19Z"/></svg>LinkedIn</a>
+          <a class="btn" href="https://github.com/Shailesh-Kala"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 4.9.4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+        </div>
+      </div>
+      <img class="avatar" src="https://avatars.githubusercontent.com/Shailesh-Kala?s=440" alt="Shailesh Kala" width="220" height="220">
+    </div>
+  </header>
+
+  <div class="stats" aria-label="Career numbers">
+    <div class="stat"><b>4,371</b><span>commits</span></div>
+    <div class="stat"><b>643</b><span>merged PRs</span></div>
+    <div class="stat"><b>672</b><span>PRs reviewed</span></div>
+    <div class="stat"><b>22</b><span>repositories</span></div>
+    <div class="stat"><b>37,000+</b><span>schools reached</span></div>
+  </div>
+
+  <section id="work">
+    <p class="eyebrow">Featured work</p>
+    <h2>Things I've led and shipped</h2>
+    <div class="projects">
+      <article class="card wide">
+        <p class="meta">Madhi Foundation · Lead Engineer</p>
+        <h3>VallamAI: AI assessment & lesson-planning platform</h3>
+        <span class="highlight">Deployed for a foundation working across 37,000+ Tamil Nadu government schools</span>
+        <p>I owned the platform end to end across four repositories (backend, AI service, mobile, and admin portal), covering architecture, delivery, and work with the foundation's leadership.</p>
+        <ul>
+          <li>Re-architected a <strong>34k-LOC AI service</strong> onto a provider-agnostic LangChain core. Switching between OpenAI and Claude is now a config change.</li>
+          <li><strong>llm_core</strong> task registry with a capability system that rejects invalid task↔model pairings at startup.</li>
+          <li><strong>Multi-agent lesson-plan generator</strong>: 5 parallel context layers feed 4 concurrent sub-agents and an orchestrator that emits schema-validated JSON.</li>
+          <li><strong>Production RAG</strong> over curriculum PDFs and YouTube transcripts (FAISS/pgvector + reranking), plus a custom <strong>MCP server</strong>.</li>
+          <li><strong>Langfuse</strong> prompt management, tracing, and cost attribution, with a RAGAS / LLM-as-judge release gate.</li>
+          <li>Offline-first <strong>React Native app</strong> (54+ screens) with speech-driven AI assessments.</li>
+        </ul>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">OpenAI</span><span class="tag">Claude</span><span class="tag">RAG</span><span class="tag">MCP</span><span class="tag">Langfuse</span><span class="tag">Django/DRF</span><span class="tag">Flask</span><span class="tag">pgvector</span><span class="tag">Celery</span><span class="tag">React Native</span><span class="tag">Next.js</span></div>
+      </article>
+
+      <article class="card">
+        <p class="meta">Invest India / DPIIT · Tech Lead</p>
+        <h3>PMG Portal</h3>
+        <span class="highlight">3,000+ users migrated with zero downtime</span>
+        <p>The Government of India's national platform for unblocking infrastructure projects above ₹500 crore.</p>
+        <ul>
+          <li>Delivered the <strong>IIG–PMG integration</strong>, linking 2,000+ projects worth ~₹60 lakh crore.</li>
+          <li><strong>Keycloak SSO</strong> and a six-role permission model spanning ministries, states, and districts.</li>
+          <li>Authored 240 PRs and reviewed 514 · <a href="https://coloredcow.com/work/coloredcow-moves-pm-gati-shakti-initiative-forward/">Case study →</a></li>
+        </ul>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">Elasticsearch</span><span class="tag">Keycloak</span></div>
+      </article>
+
+      <article class="card">
+        <p class="meta">SankalpTaru Foundation · Tech Lead, 2.5+ yrs</p>
+        <h3>SankalpTaru</h3>
+        <span class="highlight">Held up at 4x concurrency with no extra server spend</span>
+        <p>Tree-plantation donation platform: storefront, Laravel platform, admin, and field app.</p>
+        <ul>
+          <li>Delivered <strong>two full e-commerce revamps</strong> across WordPress and Laravel.</li>
+          <li>Built six-factor weighted search ranking; added <strong>Redis + CDN</strong>; root-caused slow requests with <strong>k6</strong>.</li>
+          <li>Supported blockchain-backed provenance for 139,000+ trees.</li>
+        </ul>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">WordPress</span><span class="tag">React Native</span><span class="tag">Redis</span><span class="tag">k6</span></div>
+      </article>
+    </div>
+
+    <h2 style="margin-top:56px;font-size:24px">More projects</h2>
+    <div class="mini">
+      <article class="card"><h3>Unos y Otros</h3><p>Cigar collection & humidor platform. Took it from an empty repo to v1.6.0, with an AI-seeded reference database.</p><div class="tags"><span class="tag">Laravel</span><span class="tag">OpenAI</span></div></article>
+      <article class="card"><h3><a href="https://aistudent.community">AI Student Community</a></h3><p>Two MERN community platforms for Shashwat Foundation, each built solo from first commit to live product.</p><div class="tags"><span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node</span></div></article>
+      <article class="card"><h3>WisdomCircle</h3><p>Second-career platform. As Tech Lead, I extended it for Singapore expansion and started an automation-testing initiative.</p><div class="tags"><span class="tag">Client lead</span><span class="tag">QA automation</span></div></article>
+      <article class="card"><h3>SRG Profiler</h3><p>Candidate assessment platform with multi-tenant company scoping, a scoring engine, and report generation.</p><div class="tags"><span class="tag">WordPress</span><span class="tag">Gravity Forms</span></div></article>
+      <article class="card"><h3>I4F Portal</h3><p>India–Israel Industrial R&D Fund: partnership workflows, queued jobs, and a partner search API.</p><div class="tags"><span class="tag">Laravel</span><span class="tag">MySQL</span></div></article>
+      <article class="card"><h3>Swataleem · Gramhal</h3><p>A campaign dashboard and agri-tech tooling for smallholder farmers, including contributions to Flask Admin.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span></div></article>
+    </div>
+
+    <h2 style="margin-top:56px;font-size:24px">Side projects</h2>
+    <div class="mini">
+      <article class="card"><h3><a href="https://shailesh-kala.github.io/answerbubble/">AnswerBubble</a></h3><p>Instant FAQ answers + WhatsApp chat for any website. One copy-paste, no server, no tracking.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">Widget</span></div></article>
+      <article class="card"><h3><a href="https://github.com/Shailesh-Kala/alarm-clock-cli">alarm-clock-cli</a></h3><p>A terminal alarm clock in Python, built with only the standard library.</p><div class="tags"><span class="tag">Python</span><span class="tag">CLI</span></div></article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow">Experience</p>
+    <h2>Where I've worked</h2>
+    <div class="timeline">
+      <div class="job">
+        <h3>Software Engineer, Tech Lead / Lead Engineer · <a href="https://coloredcow.com">ColoredCow</a></h3>
+        <p class="when">Apr 2022 – Sep 2026 · Gurugram</p>
+        <ul>
+          <li>Tech Lead on five flagship engagements: PMG Portal, VallamAI, SankalpTaru, WisdomCircle, and Unos y Otros.</li>
+          <li>Wrote 4,371 commits and merged 643 PRs across 22 repositories in government, non-profit, e-commerce, and commercial work.</li>
+          <li>Reviewed 672 PRs as the review gate on the platforms I led.</li>
+          <li>Resolved production performance issues with Redis caching, CDN integration, and background-job tuning.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>BCA · Jodhpur National University</h3>
+        <p class="when">2018 – 2021</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="eyebrow">Skills</p>
+    <h2>What I work with</h2>
+    <div class="skills">
+      <div class="skill"><h3>AI / LLM</h3><div class="tags"><span class="tag">LangChain</span><span class="tag">OpenAI API</span><span class="tag">Claude API</span><span class="tag">Langfuse</span><span class="tag">RAG</span><span class="tag">MCP</span><span class="tag">Multi-agent</span><span class="tag">RAGAS</span></div></div>
+      <div class="skill"><h3>Languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div></div>
+      <div class="skill"><h3>Backend</h3><div class="tags"><span class="tag">Spring Boot</span><span class="tag">Laravel</span><span class="tag">Django/DRF</span><span class="tag">Flask</span><span class="tag">Node/Express</span><span class="tag">Celery</span></div></div>
+      <div class="skill"><h3>Frontend & Mobile</h3><div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">React Native</span></div></div>
+      <div class="skill"><h3>Data & Search</h3><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Elasticsearch</span><span class="tag">FAISS</span><span class="tag">Redis</span></div></div>
+      <div class="skill"><h3>DevOps, Auth & Testing</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Keycloak</span><span class="tag">Sentry</span><span class="tag">TDD</span><span class="tag">Playwright</span><span class="tag">k6</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's build something</h2>
+    <p>I'm open to AI/LLM engineering and full-stack tech-lead roles.</p>
+    <div class="ctas">
+      <a class="btn primary" href="mailto:shaileshkala00@gmail.com">shaileshkala00@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/shailesh-kala-142954182">LinkedIn</a>
+      <a class="btn" href="https://github.com/Shailesh-Kala">GitHub</a>
+    </div>
+    <small>Gurugram, India</small>
+  </div>
+</footer>
+
+</body>
+</html>
